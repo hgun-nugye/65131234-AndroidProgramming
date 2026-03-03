@@ -48,8 +48,8 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
-                android:inputType="number"
-                android:textSize="20sp" />
+                android:inputType="numberDecimal"
+                android:textSize="20sp"/>
         </TableRow>
 
         <TableRow
@@ -73,7 +73,7 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textSize="20sp" />
         </TableRow>
 
@@ -113,15 +113,17 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:text="Tiếp tục" />
+            android:text="Tiếp tục"
+            android:onClick="btnTiepTuc"/>
 
         <Button
-            android:id="@+id/btnTong"
+            android:id="@+id/btnTinhTong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:text="Tính Tổng" />
+            android:text="Tính Tổng"
+            android:onClick="btnTinhTong"/>
 
         <Button
             android:id="@+id/btnThoat"
@@ -129,7 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:text="Thoát" />
+            android:text="Thoát"
+            android:onClick="btnThoat"/>
 
     </LinearLayout>
 
