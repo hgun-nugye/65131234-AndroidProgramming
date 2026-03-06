@@ -1,4 +1,4 @@
-package com.example.conghaiso;
+package com.BT1.helloworld;
 
 import org.junit.Test;
 

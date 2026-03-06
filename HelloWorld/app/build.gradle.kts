@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.helloworld"
+    namespace = "com.BT1.helloworld"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1

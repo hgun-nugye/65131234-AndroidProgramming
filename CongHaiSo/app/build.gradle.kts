@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.conghaiso"
+    namespace = "com.BT2.conghaiso"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
