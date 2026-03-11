@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:background="#900505"
         android:padding="20sp"
-        android:text="Tính Tổng 2 Số"
+        android:text="Máy tính cơ bản"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -102,6 +102,46 @@
         </TableRow>
     </TableLayout>
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnCong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:onClick="Cong"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btnTru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:onClick="Tru"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btnNhan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:onClick="Nhan"
+        android:text="*" />
+
+    <Button
+        android:id="@+id/btnChia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:onClick="Chia"
+        android:text="/" />
+</LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -113,17 +153,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:text="Tiếp tục"
-            android:onClick="btnTiepTuc"/>
-
-        <Button
-            android:id="@+id/btnTinhTong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:layout_weight="1"
-            android:text="Tính Tổng"
-            android:onClick="btnTinhTong"/>
+            android:onClick="btnTiepTuc"
+            android:text="Tiếp tục" />
 
         <Button
             android:id="@+id/btnThoat"
@@ -131,8 +162,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:text="Thoát"
-            android:onClick="btnThoat"/>
+            android:onClick="btnThoat"
+            android:text="Thoát" />
 
     </LinearLayout>
 

@@ -16,7 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     EditText inputA, inputB;
     TextView kq;
-    Button btnTiepTuc, btnTinhTong, btnThoat;
+    Button btnTiepTuc, btnThoat;
+    Button btnCong, btnTru, btnNhan, btnChia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
         kq = findViewById(R.id.kq);
 
         btnTiepTuc = findViewById(R.id.btnTiepTuc);
-        btnTinhTong = findViewById(R.id.btnTinhTong);
         btnThoat = findViewById(R.id.btnThoat);
+        btnCong= findViewById(R.id.btnCong);
+        btnTru= findViewById(R.id.btnTru);
+        btnNhan= findViewById(R.id.btnNhan);
+        btnChia= findViewById(R.id.btnChia);
     }
 
     public void btnTiepTuc(View view) {
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         kq.setText("");
     }
 
-    public void btnTinhTong(View view) {
+    public void Cong (View view) {
         String sa = inputA.getText().toString().trim();
         String sb = inputB.getText().toString().trim();
 
@@ -60,7 +64,63 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void Tru (View view) {
+        String sa = inputA.getText().toString().trim();
+        String sb = inputB.getText().toString().trim();
+
+        if (sa.isEmpty() || sb.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double a= Double.parseDouble(inputA.getText().toString());
+        double b= Double.parseDouble(inputB.getText().toString());
+
+        double hieu= a-b;
+        kq.setText(String.valueOf(hieu));
+
+    }
+
+    public void Nhan (View view) {
+        String sa = inputA.getText().toString().trim();
+        String sb = inputB.getText().toString().trim();
+
+        if (sa.isEmpty() || sb.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double a= Double.parseDouble(inputA.getText().toString());
+        double b= Double.parseDouble(inputB.getText().toString());
+
+        double tich= a*b;
+        kq.setText(String.valueOf(tich));
+
+    }
+
+    public void Chia (View view) {
+        String sa = inputA.getText().toString().trim();
+        String sb = inputB.getText().toString().trim();
+
+        if (sa.isEmpty() || sb.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(sb.equals("0")){
+            Toast.makeText(this, "Không thể chia cho 0!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double a= Double.parseDouble(inputA.getText().toString());
+        double b= Double.parseDouble(inputB.getText().toString());
+
+        double thuong= a/b;
+        kq.setText(String.valueOf(thuong));
+
+    }
+
     public void btnThoat(View view) {
         finish();
     }
+
 }
