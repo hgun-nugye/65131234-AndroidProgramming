@@ -48,6 +48,7 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
+                android:textStyle="bold"
                 android:inputType="numberDecimal"
                 android:textSize="20sp"/>
         </TableRow>
@@ -73,6 +74,7 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
+                android:textStyle="bold"
                 android:inputType="numberDecimal"
                 android:textSize="20sp" />
         </TableRow>
@@ -98,6 +100,7 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
+                android:textStyle="bold"
                 android:textSize="20sp" />
         </TableRow>
     </TableLayout>
@@ -105,6 +108,7 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
     <Button
         android:id="@+id/btnCong"
         android:layout_width="wrap_content"
@@ -112,7 +116,9 @@
         android:layout_margin="10sp"
         android:layout_weight="1"
         android:onClick="Cong"
-        android:text="+" />
+        android:text="+"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnTru"
@@ -121,6 +127,8 @@
         android:layout_margin="10sp"
         android:layout_weight="1"
         android:onClick="Tru"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:text="-" />
 
     <Button
@@ -130,6 +138,8 @@
         android:layout_margin="10sp"
         android:layout_weight="1"
         android:onClick="Nhan"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="*" />
 
     <Button
@@ -139,6 +149,8 @@
         android:layout_margin="10sp"
         android:layout_weight="1"
         android:onClick="Chia"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="/" />
 </LinearLayout>
 
@@ -151,9 +163,10 @@
             android:id="@+id/btnTiepTuc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10sp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:onClick="btnTiepTuc"
+            android:textSize="20sp"
             android:text="Tiếp tục" />
 
         <Button
@@ -163,6 +176,7 @@
             android:layout_margin="10sp"
             android:layout_weight="1"
             android:onClick="btnThoat"
+            android:textSize="20sp"
             android:text="Thoát" />
 
     </LinearLayout>
