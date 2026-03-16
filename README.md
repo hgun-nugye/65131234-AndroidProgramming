@@ -4,12 +4,12 @@
 
 **2. Bài tập 2: Thiết kế giao diện và chạy chương trình cộng, trừ, nhân, chia 2 số cơ bản.**
 
-![alt text](BT2.png)
+<img width="280" height="560" alt="image" src="./BT2.png" />
 
 **3. Bài tập 3: Thiết kế giao diện LinearLayout với các Button.**
 
-![alt text](BT3.png)
+<img width="280" height="560" alt="image" src="./BT3.png" />
 
 **4. Bài tập 4: Thiết kế giao diện LinearLayout và các phép tính cơ bản.**
 
-![alt text](BT4.png)
+<img width="280" height="560" alt="image" src="./BT4.png" />
