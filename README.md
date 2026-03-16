@@ -2,7 +2,7 @@
 
 <img width="280" height="560" alt="image" src="https://github.com/user-attachments/assets/1b79a12a-785a-4f46-a4ee-5b3c0bee0c56" />
 
-**2. Bài tập 2: Thiết kế giao diện và chạy chương trình cộng, trừ, nhân, chia 2 số cơ bản.**
+**2. Bài tập 2: Thiết kế giao diện và chạy chương trình cộng 2 số cơ bản.**
 
 <img width="280" height="560" alt="image" src="./BT2.png" />
 
