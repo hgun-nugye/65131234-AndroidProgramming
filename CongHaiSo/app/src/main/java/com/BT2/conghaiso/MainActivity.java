@@ -17,28 +17,25 @@ public class MainActivity extends AppCompatActivity {
     EditText inputA, inputB;
     TextView kq;
     Button btnTiepTuc, btnThoat;
-    Button btnCong, btnTru, btnNhan, btnChia;
+    Button btnTong;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+    void getDieuKhien() {
         inputA = findViewById(R.id.inputA);
         inputB = findViewById(R.id.inputB);
         kq = findViewById(R.id.kq);
 
         btnTiepTuc = findViewById(R.id.btnTiepTuc);
         btnThoat = findViewById(R.id.btnThoat);
-        btnCong= findViewById(R.id.btnCong);
-        btnTru= findViewById(R.id.btnTru);
-        btnNhan= findViewById(R.id.btnNhan);
-        btnChia= findViewById(R.id.btnChia);
+
+        btnTong = findViewById(R.id.btnTong);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getDieuKhien();
+
     }
 
     public void btnTiepTuc(View view) {
@@ -47,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         kq.setText("");
     }
 
-    public void Cong (View view) {
+    public void Cong(View view) {
         String sa = inputA.getText().toString().trim();
         String sb = inputB.getText().toString().trim();
 
@@ -56,66 +53,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        double a= Double.parseDouble(inputA.getText().toString());
-        double b= Double.parseDouble(inputB.getText().toString());
+        double a = Double.parseDouble(inputA.getText().toString());
+        double b = Double.parseDouble(inputB.getText().toString());
 
-        double tong= a+b;
+        double tong = a + b;
         kq.setText(String.valueOf(tong));
-
-    }
-
-    public void Tru (View view) {
-        String sa = inputA.getText().toString().trim();
-        String sb = inputB.getText().toString().trim();
-
-        if (sa.isEmpty() || sb.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        double a= Double.parseDouble(inputA.getText().toString());
-        double b= Double.parseDouble(inputB.getText().toString());
-
-        double hieu= a-b;
-        kq.setText(String.valueOf(hieu));
-
-    }
-
-    public void Nhan (View view) {
-        String sa = inputA.getText().toString().trim();
-        String sb = inputB.getText().toString().trim();
-
-        if (sa.isEmpty() || sb.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        double a= Double.parseDouble(inputA.getText().toString());
-        double b= Double.parseDouble(inputB.getText().toString());
-
-        double tich= a*b;
-        kq.setText(String.valueOf(tich));
-
-    }
-
-    public void Chia (View view) {
-        String sa = inputA.getText().toString().trim();
-        String sb = inputB.getText().toString().trim();
-
-        if (sa.isEmpty() || sb.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập đủ 2 số!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if(sb.equals("0")){
-            Toast.makeText(this, "Không thể chia cho 0!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        double a= Double.parseDouble(inputA.getText().toString());
-        double b= Double.parseDouble(inputB.getText().toString());
-
-        double thuong= a/b;
-        kq.setText(String.valueOf(thuong));
 
     }
 

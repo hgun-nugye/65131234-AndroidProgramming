@@ -14,9 +14,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#900505"
+        android:background="#673AB7"
         android:padding="20sp"
-        android:text="Máy tính cơ bản"
+        android:text="Tính Tổng 2 Số"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -49,8 +49,7 @@
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
@@ -75,8 +74,7 @@
                 android:ems="10"
                 android:hint="0"
                 android:inputType="numberDecimal"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
@@ -100,59 +98,9 @@
                 android:layout_marginLeft="30sp"
                 android:ems="10"
                 android:hint="0"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
         </TableRow>
     </TableLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btnCong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:layout_weight="1"
-            android:onClick="Cong"
-            android:text="+"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnTru"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:layout_weight="1"
-            android:onClick="Tru"
-            android:text="-"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnNhan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:layout_weight="1"
-            android:onClick="Nhan"
-            android:text="*"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnChia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:layout_weight="1"
-            android:onClick="Chia"
-            android:text="/"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -163,11 +111,19 @@
             android:id="@+id/btnTiepTuc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="10sp"
             android:layout_weight="1"
-            android:onClick="btnTiepTuc"
             android:text="Tiếp tục"
-            android:textSize="20sp" />
+            android:onClick="btnTiepTuc"/>
+
+        <Button
+            android:id="@+id/btnTong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:text="Tính Tổng"
+            android:onClick="Cong"/>
 
         <Button
             android:id="@+id/btnThoat"
@@ -175,9 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:layout_weight="1"
-            android:onClick="btnThoat"
             android:text="Thoát"
-            android:textSize="20sp" />
+            android:onClick="btnThoat"/>
 
     </LinearLayout>
 
