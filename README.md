@@ -16,6 +16,8 @@
 
 **5. Bài tập 7: Thiết kế giao diện ListView**
 
-<img width="200" height="420" alt="image" src="./BT7_vatlieu.jpg" />
+<div style="display: flex">
+  <img width="200" height="420" alt="image" src="./BT7_vatlieu.jpg" />
 
 <img width="200" height="420" alt="image" src="./BT7_monan.jpg" />
+</div>
