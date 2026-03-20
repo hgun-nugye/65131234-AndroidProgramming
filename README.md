@@ -12,7 +12,7 @@
 
 **4. Bài tập 4: Thiết kế giao diện LinearLayout và các phép tính cơ bản.**
 
-<img width="200" height="420" alt="image" src="/images_for_readme/BT4.png />
+<img width="200" height="420" alt="image" src="/images_for_readme/BT4.png"/>
 
 **5. Bài tập 7: Thiết kế giao diện ListView**
 
