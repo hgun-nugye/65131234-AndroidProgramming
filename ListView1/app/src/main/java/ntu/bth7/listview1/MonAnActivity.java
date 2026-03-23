@@ -18,8 +18,16 @@ import androidx.core.view.WindowInsetsCompat;
 public class MonAnActivity extends AppCompatActivity {
     ListView listView;
     Button btnChuyen;
-    String[] monAn = {"Bún đậu mắm tôm", "Bún cá Ninh Hòa", "Bánh xèo", "Cháo lòng bánh hỏi"};
-
+    String[] monAn = {
+            "Bún đậu mắm tôm", "Bún cá Ninh Hòa", "Bánh xèo", "Cháo lòng bánh hỏi",
+            "Phở bò", "Phở gà", "Bún bò Huế", "Hủ tiếu",
+            "Cơm tấm", "Cơm gà", "Cơm chiên", "Mì xào",
+            "Bánh mì thịt", "Bánh mì trứng", "Bánh mì chả cá",
+            "Gỏi cuốn", "Chả giò", "Nem nướng",
+            "Lẩu thái", "Lẩu cá", "Lẩu bò",
+            "Bún riêu", "Bún thịt nướng", "Bún mắm",
+            "Miến gà", "Miến lươn", "Cháo gà", "Cháo vịt"
+    };
     void getDieuKhien(){
         listView = findViewById(R.id.listView);
         btnChuyen = findViewById(R.id.btnChuyen);

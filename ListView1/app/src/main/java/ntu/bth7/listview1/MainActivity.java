@@ -18,8 +18,15 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     ListView listView;
     Button btnChuyen;
-    String[] dsVatLieu = {"Xi măng", "Gạch", "Đá chẻ", "Sơn", "Cát", "Vôi"};
-
+    String[] dsVatLieu = {
+            "Xi măng", "Gạch", "Đá chẻ", "Sơn", "Cát", "Vôi",
+            "Thép", "Gạch ống", "Gạch men", "Ngói", "Ống nước",
+            "Sắt hộp", "Tôn lạnh", "Cửa nhôm", "Kính", "Keo dán",
+            "Bột trét", "Chống thấm", "Dây điện", "Ổ cắm",
+            "Đèn LED", "Sơn lót", "Sơn phủ", "Cát vàng",
+            "Đá 1x2", "Đá 4x6", "Cát xây", "Cát tô",
+            "Gạch block", "Gạch bê tông", "Thép cây", "Thép cuộn"
+    };
     void getDieuKhien() {
         listView = findViewById(R.id.listView);
         btnChuyen = findViewById(R.id.btnChuyen);
@@ -41,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Bạn đã chọn vật liệu: " + item, Toast.LENGTH_SHORT).show();
             }
         });
+
+//        View header = getLayoutInflater().inflate(R.layout.vat_lieu_header, null);
+//        listView.addHeaderView(header);
 
         btnChuyen.setOnClickListener(new View.OnClickListener() {
             @Override
