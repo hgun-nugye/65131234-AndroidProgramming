@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="10dp">
+
+    <ImageView
+        android:id="@+id/anhDaiDien"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tenMonAn"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Mon Thu Nhat" />
+
+        <TextView
+            android:id="@+id/giaMonAn"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="20dp"
+            android:text="200000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/moTaMonAn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15dp"
+            android:text="mo ta o day"/>
+    </LinearLayout>
+
+</LinearLayout>
