@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,7 +52,7 @@ public class LanscapeAdapter extends RecyclerView.Adapter<LanscapeAdapter.ItemLa
         return lstData.size();
     }
 
-    class ItemLandHolder extends RecyclerView.ViewHolder{
+    class ItemLandHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView tvCaption;
         ImageView imgViewLand;
 
@@ -59,6 +60,19 @@ public class LanscapeAdapter extends RecyclerView.Adapter<LanscapeAdapter.ItemLa
             super(itemView);
             this.tvCaption = itemView.findViewById(R.id.textViewCaption);
             this.imgViewLand = itemView.findViewById(R.id.imageViewLand);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            int viTriClicked = getAdapterPosition();
+            Landscape phanTuClicked = lstData.get(viTriClicked);
+            //lay thong tin
+            String tenAnh = phanTuClicked.getImageName();
+            String caption = phanTuClicked.getCaption();
+            //Toast thong bao
+            String chuoiTB = " Bạn vừa click vào " + caption;
+            Toast.makeText(context, chuoiTB, Toast.LENGTH_SHORT).show();
         }
     }
 
