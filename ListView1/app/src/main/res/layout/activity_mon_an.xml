@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="110dp"
             android:layout_gravity="center"
-            android:text="Vật liệu xây dựng"
+            android:text="Món ăn"
             android:textColor="#FFF"
             android:textSize="40sp"
             android:textStyle="bold"/>
