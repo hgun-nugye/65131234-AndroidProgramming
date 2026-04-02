@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FragmentDong" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+<!--         <item name="colorPrimary">#19A05B0A</item>-->
+    </style>
+
+    <style name="Theme.FragmentDong" parent="Base.Theme.FragmentDong" />
+</resources>
