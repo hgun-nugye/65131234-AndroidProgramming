@@ -56,29 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-//        navigationView.setOnItemSelectedListener(item -> {
-//            Fragment fragment;
-//            int id = item.getItemId();
-//
-//            if (id == R.id.navigation_shop) {
-//                fragment = new ShopFragment();
-//                loadFragment(fragment);
-//                return true;
-//            } else if (id == R.id.navigation_gifts) {
-//                fragment = new GiftsFragment();
-//                loadFragment(fragment);
-//                return true;
-//            } else if (id == R.id.navigation_cart) {
-//                fragment = new CartFragment();
-//                loadFragment(fragment);
-//                return true;
-//            } else if (id == R.id.navigation_profile) {
-//                fragment = new ProfileFragment();
-//                loadFragment(fragment);
-//                return true;
-//            }
-//            return false;
-//        });
 
         // Load default fragment
         loadFragment(new ShopFragment());

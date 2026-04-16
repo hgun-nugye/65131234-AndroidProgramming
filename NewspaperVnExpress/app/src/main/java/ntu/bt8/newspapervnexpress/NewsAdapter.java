@@ -28,7 +28,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     @NonNull
     @Override
     public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_news, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.item_news, parent, false);
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_news, parent, false);
         return new NewsViewHolder(view);
     }
 
@@ -45,10 +47,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
                 .error(android.R.drawable.ic_menu_report_image)
                 .into(holder.imgNews);
 
-        holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, NewsDetailActivity.class);
-            intent.putExtra("link", item.getLink());
-            context.startActivity(intent);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, NewsDetailActivity.class);
+                intent.putExtra("link", item.getLink());
+                context.startActivity(intent);
+
+            }
         });
     }
 
