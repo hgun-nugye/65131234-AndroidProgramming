@@ -31,8 +31,7 @@ public class ChiTietMonAn extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChiTietMonAn.this, ActivityMonAn.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

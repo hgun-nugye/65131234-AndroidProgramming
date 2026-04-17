@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,8 @@ public class BaiThuocAdapter extends RecyclerView.Adapter<BaiThuocAdapter.ViewHo
                 if (listener != null) {
                     listener.onItemClick(item);
                 }
+                else
+                    Toast.makeText(view.getContext(), "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -29,8 +29,8 @@ import com.google.android.material.button.MaterialButton;
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ActivityGioiThieu.this, MainActivity.class);
-                startActivity(intent);
+                finish();
+
             }
         });
     }

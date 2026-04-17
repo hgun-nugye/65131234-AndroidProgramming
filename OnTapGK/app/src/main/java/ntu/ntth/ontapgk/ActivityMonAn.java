@@ -65,8 +65,7 @@ public class ActivityMonAn extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {;
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ActivityMonAn.this, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

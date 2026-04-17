@@ -53,8 +53,8 @@ public class ActivityBMI extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ActivityBMI.this, MainActivity.class);
-                startActivity(intent);
+                finish();
+
             }
         });
     }
