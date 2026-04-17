@@ -49,7 +49,12 @@ public class ActivityBaiThuoc extends AppCompatActivity {
         dsBaiThuoc.add(new BaiThuoc("Ma Hoàng Thang", "20 phút", R.drawable.medicine));
 
         adapter = new BaiThuocAdapter(dsBaiThuoc, item -> {
-            Toast.makeText(ActivityBaiThuoc.this, "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ActivityBaiThuoc.this, ChiTietBaiThuoc.class);
+            intent.putExtra("ten", item.getTen());
+            intent.putExtra("thoigian", item.getThoiGian());
+            intent.putExtra("hinh", item.getHinhAnh());
+            startActivity(intent);
+//            Toast.makeText(ActivityBaiThuoc.this, "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
         });
 
         rvBaiThuoc.setLayoutManager(new LinearLayoutManager(this));

@@ -55,7 +55,10 @@ public class ActivityMonAn extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected = dsMonAn.get(i);
-                Toast.makeText(ActivityMonAn.this, "Bạn chọn: " + selected, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ActivityMonAn.this, ChiTietMonAn.class);
+                intent.putExtra("ten", selected);
+                startActivity(intent);
+//                Toast.makeText(ActivityMonAn.this, "Bạn chọn: " + selected, Toast.LENGTH_SHORT).show();
             }
         });
 

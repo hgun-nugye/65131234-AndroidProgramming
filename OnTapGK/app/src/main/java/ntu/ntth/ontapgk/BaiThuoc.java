@@ -34,4 +34,5 @@ public class BaiThuoc {
     public void setHinhAnh(int hinhAnh) {
         this.hinhAnh = hinhAnh;
     }
+
 }

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnTapGK">
         <activity
+            android:name=".ChiTietBaiThuoc"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietMonAn"
+            android:exported="false" />
+        <activity
             android:name=".ActivityMonAn"
             android:exported="false" />
         <activity
