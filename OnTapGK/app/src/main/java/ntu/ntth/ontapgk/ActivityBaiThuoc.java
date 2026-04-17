@@ -39,13 +39,13 @@ public class ActivityBaiThuoc extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
 
         dsBaiThuoc = new ArrayList<>();
-        dsBaiThuoc.add(new BaiThuoc("Sâm Quy Đại Quả", "45 phút", R.drawable.medicine));
+        dsBaiThuoc.add(new BaiThuoc("Sâm Quy Đại Quả", "45 phút", R.drawable.samquy));
         dsBaiThuoc.add(new BaiThuoc("Bát Trân Thang", "60 phút", R.drawable.medicine));
         dsBaiThuoc.add(new BaiThuoc("Lục Vị Địa Hoàng", "30 phút", R.drawable.medicine));
         dsBaiThuoc.add(new BaiThuoc("An Cung Ngưu Hoàng", "15 phút", R.drawable.medicine));
         dsBaiThuoc.add(new BaiThuoc("Tiêu Dao Tán", "40 phút", R.drawable.medicine));
         dsBaiThuoc.add(new BaiThuoc("Độc Hoạt Tang Ký Sinh", "50 phút", R.drawable.medicine));
-        dsBaiThuoc.add(new BaiThuoc("Quy Tỳ Thang", "45 phút", R.drawable.medicine));
+        dsBaiThuoc.add(new BaiThuoc("Quy Tỳ Thang", "45 phút", R.drawable.quytythang));
         dsBaiThuoc.add(new BaiThuoc("Ma Hoàng Thang", "20 phút", R.drawable.medicine));
 
         adapter = new BaiThuocAdapter(dsBaiThuoc, item -> {

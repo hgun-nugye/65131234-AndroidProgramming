@@ -61,5 +61,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        lamthem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ActivityThem.class);
+                startActivity(intent);
+            }
+        });
     }
 }

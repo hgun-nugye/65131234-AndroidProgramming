@@ -45,8 +45,7 @@ public class ChiTietBaiThuoc extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {;
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChiTietBaiThuoc.this, ActivityBaiThuoc.class);
-                startActivity(intent);
+               finish();
             }
         });
     }

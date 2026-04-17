@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#91C9F2F4">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:text="Player X turn"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:padding="8dp"
+        android:rowCount="3"
+        android:background="#91C9F2F4">
+
+        <!-- 9 ô -->
+        <Button
+            android:id="@+id/btn0"
+            style="@style/Cell"/>
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/Cell" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/Cell" />
+    </GridLayout>
+
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:text="Reset"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
