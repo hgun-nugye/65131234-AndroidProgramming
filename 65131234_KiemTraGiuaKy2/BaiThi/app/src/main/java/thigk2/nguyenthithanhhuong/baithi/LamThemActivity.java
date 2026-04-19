@@ -1,29 +1,40 @@
-package ntu.ntth.tictactoe;
+package thigk2.nguyenthithanhhuong.baithi;
 
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class LamThemActivity extends AppCompatActivity {
 
     Button[] buttons = new Button[9];
     boolean playerX = true; // người = X, máy = O
     TextView tvStatus;
 
-    MediaPlayer clickSound, winSound;
+    ImageButton btnBack;
     Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_lam_them);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.game), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
+        btnBack = findViewById(R.id.btn_back);
         tvStatus = findViewById(R.id.tv_status);
 
         // ánh xạ nút
@@ -36,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         findViewById(R.id.btn_reset).setOnClickListener(v -> resetGame());
+        btnBack.setOnClickListener(v -> finish());
     }
 
     // người chơi
@@ -126,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (clickSound != null) clickSound.release();
-        if (winSound != null) winSound.release();
     }
 
     int findBestMoveSimple() {
