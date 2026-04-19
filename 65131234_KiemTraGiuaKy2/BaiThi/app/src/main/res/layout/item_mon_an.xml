@@ -31,7 +31,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="26sp"
-                android:background="@drawable/bg_icon_food"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_icon_food"/>
 
         </com.google.android.material.card.MaterialCardView>
 

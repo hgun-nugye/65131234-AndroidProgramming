@@ -24,7 +24,6 @@ public class ChiTietMonAnActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chi_tiet_mon_an);
 
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_mon_an);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.chitietmonan), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

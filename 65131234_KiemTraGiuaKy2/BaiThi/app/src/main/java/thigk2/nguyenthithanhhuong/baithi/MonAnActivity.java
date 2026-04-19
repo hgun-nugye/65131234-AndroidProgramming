@@ -39,7 +39,6 @@ public class MonAnActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon_an);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_mon_an);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.monan), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

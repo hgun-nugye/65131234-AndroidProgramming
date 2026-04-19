@@ -18,7 +18,8 @@
             android:id="@+id/img_medicine"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@drawable/bg_header_gradient"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_header_gradient"
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Nút back -->
