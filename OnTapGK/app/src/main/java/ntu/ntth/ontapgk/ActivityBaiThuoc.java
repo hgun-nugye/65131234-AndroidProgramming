@@ -54,7 +54,7 @@ public class ActivityBaiThuoc extends AppCompatActivity {
             intent.putExtra("thoigian", item.getThoiGian());
             intent.putExtra("hinh", item.getHinhAnh());
             startActivity(intent);
-//            Toast.makeText(ActivityBaiThuoc.this, "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(ActivityBaiThuoc.this, "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
         });
 
         rvBaiThuoc.setLayoutManager(new LinearLayoutManager(this));

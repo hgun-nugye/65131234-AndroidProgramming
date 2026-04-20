@@ -32,7 +32,7 @@
 
     <!-- Tiêu đề -->
     <TextView
-        android:id="@+id/tv_screen_title"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Các Doanh nhân Việt Nam"
@@ -44,24 +44,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/btn_back" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_search"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="-20dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_bg">
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card_search"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:layout_marginTop="-20dp"-->
+<!--        app:cardCornerRadius="16dp"-->
+<!--        app:cardElevation="6dp"-->
+<!--        app:cardBackgroundColor="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/header_bg">-->
 
 
-    </com.google.android.material.card.MaterialCardView>
+<!--    </com.google.android.material.card.MaterialCardView>-->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_bai_thuoc"
+        android:id="@+id/rv_danhnhan"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"

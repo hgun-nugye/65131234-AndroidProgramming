@@ -26,7 +26,7 @@
             app:cardBackgroundColor="#FFF3E0">
 
             <ImageView
-                android:id="@+id/img_food"
+                android:id="@+id/img_danhnhan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
