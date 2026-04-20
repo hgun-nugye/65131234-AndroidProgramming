@@ -22,7 +22,7 @@ public class DanhNhanAdapter extends RecyclerView.Adapter<DanhNhanAdapter.ViewHo
         void onItemClick(DanhNhan item);
     }
 
-    public DanhNhanAdapter(OnItemClickListener listener, List<DanhNhan> danhSach) {
+    public DanhNhanAdapter(List<DanhNhan> danhSach, OnItemClickListener listener) {
         this.listener = listener;
         this.danhSach = danhSach;
     }

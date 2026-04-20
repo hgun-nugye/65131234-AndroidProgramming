@@ -37,7 +37,7 @@ import java.util.List;
 
 public class DanhNhanVietNamActivity extends AppCompatActivity {
     private RecyclerView reDanhNhan;
-    private DanhNhan adapter;
+    private DanhNhanAdapter adapter;
     private ImageButton btnBack;
 
     private final List<DanhNhan> danhSach = new ArrayList<>();
@@ -48,20 +48,29 @@ public class DanhNhanVietNamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_danh_nhan_viet_nam);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.danhnhan), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         getDieuKhien();
         loadData();
+
         btnBack.setOnClickListener(view -> finish());
+
+        reDanhNhan.setLayoutManager(new LinearLayoutManager(this));
+
         adapter = new DanhNhanAdapter(danhSach, item -> {
-            Toast.makeText(DanhNhanVietNamActivity.this, "Bạn chọn: " + item.getTen(), Toast.LENGTH_SHORT).show();
-            reDanhNhan.setLayoutManager(new LinearLayoutManager(this));
-            reDanhNhan.setAdapter(adapter);
+            Toast.makeText(DanhNhanVietNamActivity.this,
+                    "Bạn chọn: " + item.getTen(),
+                    Toast.LENGTH_SHORT).show();
         });
+
+        reDanhNhan.setAdapter(adapter);
     }
+
 
     public void getDieuKhien() {
         reDanhNhan = findViewById(R.id.rv_danhnhan);
