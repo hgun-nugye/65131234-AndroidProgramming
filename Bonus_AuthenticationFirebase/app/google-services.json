@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "96913182174",
+    "firebase_url": "https://connectfirebase-6c8c1-default-rtdb.firebaseio.com",
+    "project_id": "connectfirebase-6c8c1",
+    "storage_bucket": "connectfirebase-6c8c1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96913182174:android:b967c2922febd6ef8fe14f",
+        "android_client_info": {
+          "package_name": "ntu.nguyenthithanhhuong.authenticationfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDipxZ8Xe-fcxZuID59wiEtniMvrPlTDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96913182174:android:81a4e0748172ceeb8fe14f",
+        "android_client_info": {
+          "package_name": "ntu.nguyenthithanhhuong.connectfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDipxZ8Xe-fcxZuID59wiEtniMvrPlTDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
