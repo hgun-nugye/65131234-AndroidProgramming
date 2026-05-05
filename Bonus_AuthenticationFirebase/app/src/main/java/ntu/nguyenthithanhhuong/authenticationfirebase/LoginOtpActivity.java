@@ -54,10 +54,12 @@ public class LoginOtpActivity extends AppCompatActivity {
             public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
                 edotp.setText(phoneAuthCredential.getSmsCode());
             }
+
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
                 Toast.makeText(LoginOtpActivity.this, "Đã vượt quá số lượt gửi mã. vui lòng thử lại sau!", Toast.LENGTH_SHORT).show();
             }
+
             @Override
             public void onCodeSent(@NonNull String verificationId,
                                    PhoneAuthProvider.ForceResendingToken token) {
@@ -94,10 +96,16 @@ public class LoginOtpActivity extends AppCompatActivity {
             }
         });
     }
-    private void getOTP (String phoneNumber){
+
+    private void getOTP(String phoneNumber) {
+        // Nếu số bắt đầu bằng 0 thì bỏ đi
+        if (phoneNumber.startsWith("0")) {
+            phoneNumber = phoneNumber.substring(1);
+        }
+
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+84"+phoneNumber)       // Phone number to verify
+                        .setPhoneNumber("+84" + phoneNumber)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // (optional) Activity for callback binding
                         // If no activity is passed, reCAPTCHA verification can not be used.
@@ -105,10 +113,20 @@ public class LoginOtpActivity extends AppCompatActivity {
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
-    private void verifyOtp (String code){
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(smsVerify, code);
+
+    private void verifyOtp(String code) {
+
+        if (smsVerify == null) {
+            Toast.makeText(this, "Vui lòng lấy OTP trước", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        PhoneAuthCredential credential =
+                PhoneAuthProvider.getCredential(smsVerify, code);
+
         signInWithPhoneAuthCredential(credential);
     }
+
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -118,7 +136,10 @@ public class LoginOtpActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(LoginOtpActivity.this, "Đăng Nhập Thành Công!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginOtpActivity.this, HomeActivity.class);
+                            // Xóa toàn bộ stack cũ
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
+                            finish(); // đóng luôn LoginOtpActivity
 
                             FirebaseUser user = task.getResult().getUser();
                             // Update UI
